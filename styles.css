@@ -1,0 +1,75 @@
+:root {
+  --cell-size: 100px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: azure;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+  border-left: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+  border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+  border-bottom: none;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+#restart {
+  height: 2.5rem;
+  padding-inline: 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border-width: 0.1rem;
+}
+
+#restart:hover {
+  background-color: azure;
+}
